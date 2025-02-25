@@ -53,4 +53,19 @@ The Online E-Voting System is a web-based application built using the MERN (Mong
 
 📂 **Project Structure**
 
-Online-E-Voting-System/ ├── 📁 client/ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"># React.js frontend</span> │ ├── 📁 src/ │ ├── 📁 public/ │ ├── 📄 package.json │ └── ⚙️ .env ├── 📁 server/ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"># Node.js backend</span> │ ├── 📁 models/ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"># Mongoose schemas</span> │ ├── 📁 routes/ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"># API routes</span> │ ├── 📁 controllers/ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"># Business logic</span> │ ├── 📁 middleware/ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"># JWT, Authentication, ML Integration</span> │ ├── 📁 config/ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"># Database & Stripe configuration</span> │ ├── 📄 server.js │ └── ⚙️ .env ├── 📄 .gitignore └── 📄 README.md
+```plaintext
+
+client/
+│── src/
+│   ├── components/          # Reusable UI Components
+│   ├── pages/               # Main Pages (Dashboard, Voting, Profile)
+│   ├── assets/              # Images, Icons
+│   ├── context/             # State Management (Redux/Context API)
+│   ├── hooks/               # Custom React Hooks
+│   ├── styles/              # Tailwind CSS & Custom Styling
+│   ├── App.js               # Main React App
+│   ├── index.js             # React DOM Rendering
+│── public/                  # Static Files
+│── package.json
+│── .env
+```
