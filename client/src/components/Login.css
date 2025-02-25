@@ -1,0 +1,81 @@
+/* Main container for the login page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Background gradient */
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-form {
+  background: #fff; /* White background for the form */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Form width */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333; /* Dark text for the header */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #6a11cb; /* Focused input color */
+  box-shadow: 0px 0px 8px rgba(106, 17, 203, 0.3); /* Input focus shadow */
+}
+
+button {
+  padding: 14px;
+  background: linear-gradient(45deg, #14cc36, #0df219); /* Gradient background for the button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff4f81, #ff2e63); /* Hover effect */
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 79, 129, 0.5);
+}
+
+p {
+  color: rgb(0, 255, 115);
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    width: 90%;
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}

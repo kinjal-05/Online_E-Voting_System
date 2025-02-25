@@ -1,0 +1,108 @@
+/* AllElections.css */
+
+.all-elections-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2980b9;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #2980b9;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 18px;
+  color: #2980b9;
+}
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.election-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: rgba(52, 152, 219, 0.1); /* Transparent Blue Background */
+  border: 1px solid #ddd;
+}
+
+.election-table th,
+.election-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.election-table th {
+  background-color: rgba(52, 152, 219, 0.8); /* Transparent Blue Header */
+  color: white;
+}
+
+.election-table tr:nth-child(even) {
+  background-color: rgba(236, 240, 241, 0.8); /* Lighter transparent background */
+}
+
+.election-table tr:hover {
+  background-color: rgba(236, 240, 241, 0.6); /* Slightly darker transparent hover effect */
+}
+
+.update-btn,
+.delete-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+}
+
+.update-btn:hover {
+  background-color: #2ecc71;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}

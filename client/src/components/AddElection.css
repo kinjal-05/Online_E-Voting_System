@@ -1,0 +1,233 @@
+/* AddElection.css */
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Admin-like gradient background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.add-election-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15); /* Transparent background with blur effect */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Adding blur effect to match Admin UI */
+  color: white; /* Text color to match with the admin's theme */
+}
+
+h1 {
+  text-align: center;
+  color: #ece4e4;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff; /* White background for the table */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db; /* Blue header background */
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f4f4f4; /* Light grey background for even rows */
+}
+
+tr:hover {
+  background-color: #ecf0f1; /* Light grey on hover */
+}
+
+/* Form Styles */
+.election-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Input & Label */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: white; /* All labels set to white */
+  font-weight: 500;
+}
+
+.form-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f9fb;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  color: #333; /* Text color inside inputs */
+}
+
+.form-input:focus {
+  border-color: #3498db;
+  background-color: #ffffff;
+  outline: none;
+}
+
+select.form-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f9fb;
+}
+
+/* District Input Styles */
+.district-input {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.district-input input {
+  flex-grow: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #f7f9fb;
+}
+
+.remove-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+  background-color: #c0392b;
+}
+
+.add-button {
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: block;
+  margin-top: 12px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+/* Checkbox Styling */
+.form-group input[type="checkbox"] {
+  margin-top: 10px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/* Buttons */
+.submit-button {
+  background: linear-gradient(45deg, #ff7eb3, #ff4f81);
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(45deg, #ff4f81, #ff2e63);
+  transform: scale(1.07);
+  box-shadow: 0px 4px 15px rgba(255, 79, 129, 0.5);
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(45deg, #7f8c8d, #95a5a6);
+}
+
+/* Message Styling */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #2ecc71;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .add-election-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .form-input {
+    font-size: 14px;
+  }
+
+  .submit-button {
+    padding: 12px 24px;
+  }
+}
+
+label {
+  color: white !important;
+}
+.add-election-container h1 {
+  color: white;
+}

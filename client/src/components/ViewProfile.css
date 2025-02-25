@@ -1,0 +1,89 @@
+/* ViewProfile.css */
+
+/* Main container for the profile page */
+.profile-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Profile title */
+  .profile-title {
+    text-align: center;
+    color: #2980b9;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  /* Profile details section */
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .profile-details p {
+    font-size: 18px;
+    color: #34495e;
+  }
+  
+  .profile-details strong {
+    color: #2980b9;
+    font-weight: bold;
+  }
+  
+  /* Button to update profile */
+  .update-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .update-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Loading message styling */
+  .loading {
+    text-align: center;
+    font-size: 20px;
+    color: #f39c12;
+  }
+  
+  /* Error message styling */
+  .error {
+    text-align: center;
+    font-size: 20px;
+    color: red;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .profile-container {
+      padding: 20px;
+    }
+  
+    .profile-title {
+      font-size: 28px;
+    }
+  
+    .profile-details p {
+      font-size: 16px;
+    }
+  
+    .update-btn {
+      padding: 10px 20px;
+    }
+  }
+  

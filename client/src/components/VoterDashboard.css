@@ -1,0 +1,125 @@
+/* VoterDashboard.css */
+
+.voter-dashboard-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .voter-dashboard-title {
+    text-align: center;
+    color: #2980b9;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .voter-dashboard-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logout-btn {
+    background-color: #d91b06;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    background-color: #dc3545;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  
+  
+  .user-info {
+    text-align: center;
+  }
+  
+  .welcome-message {
+    font-size: 18px;
+    color: #2c3e50;
+  }
+  
+  .not-registered {
+    font-size: 18px;
+    color: #e74c3c;
+  }
+  
+  .voter-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .action-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .register-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-btn:hover {
+    background-color: #e67e22;
+  }
+  
+  .view-results-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+  }
+  
+  .view-results-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #f39c12;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .voter-dashboard-container {
+      padding: 20px;
+    }
+  
+    .action-btn,
+    .register-btn,
+    .view-results-btn {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  

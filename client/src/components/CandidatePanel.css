@@ -1,0 +1,102 @@
+/* CandidatePanel.css */
+
+/* Main container */
+.candidate-panel {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2980b9;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .panel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+  }
+  
+  .primary-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .secondary-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+  }
+  
+  .secondary-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .candidate-info p {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+  }
+  
+  .posts-list {
+    margin-top: 30px;
+  }
+  
+  .posts-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .post-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-item h3 {
+    color: #2980b9;
+    font-size: 20px;
+  }
+  
+  .post-item p {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  

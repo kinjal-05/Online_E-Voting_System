@@ -1,0 +1,112 @@
+/* Enhanced Admin Dashboard Styles */
+.admin-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* .dashboard-header {
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: white; /* White background for the header */
+  /* padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+} */ */
+.dashboard-header {
+  background-color: white;
+}
+.admin-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f8f3f3; /* Dark text color for better contrast */
+}
+
+.button-group {
+  background: white; /* White background for button group */
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  width: 85%;
+  max-width: 550px;
+  backdrop-filter: blur(10px);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333; /* Dark text color */
+}
+
+.dashboard-button {
+  background: linear-gradient(45deg, #ff7eb3, #ff4f81);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  margin: 10px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 90%;
+  max-width: 260px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.dashboard-button:hover {
+  background: linear-gradient(45deg, #ff4f81, #ff2e63);
+  transform: scale(1.07);
+  box-shadow: 0px 4px 15px rgba(255, 79, 129, 0.5);
+}
+
+.logout-section {
+  margin-top: 40px;
+  background-color: white; /* White background for the logout section */
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.logout-button, .view-results-button {
+  background: linear-gradient(45deg, #ff4757, #e84118);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 10px;
+  width: 160px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.logout-button:hover {
+  background: linear-gradient(45deg, #e84118, #c23616);
+  transform: scale(1.07);
+  box-shadow: 0px 4px 15px rgba(232, 65, 24, 0.5);
+}
+
+.view-results-button {
+  background: linear-gradient(45deg, #1e90ff, #007bff);
+}
+
+.view-results-button:hover {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  transform: scale(1.07);
+  box-shadow: 0px 4px 15px rgba(30, 144, 255, 0.5);
+}

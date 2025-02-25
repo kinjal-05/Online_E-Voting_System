@@ -1,0 +1,91 @@
+/* ViewResults.css */
+
+.results-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .results-title {
+    text-align: center;
+    color: #2980b9;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .result-item {
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .candidate-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .vote-count {
+    font-size: 18px;
+    color: #27ae60;
+  }
+  
+  .no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #e74c3c;
+  }
+  
+  .back-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .back-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    font-size: 18px;
+    color: #f39c12;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .results-container {
+      padding: 20px;
+    }
+  
+    .result-item {
+      padding: 15px;
+    }
+  
+    .candidate-name, .vote-count {
+      font-size: 16px;
+    }
+  }
+  

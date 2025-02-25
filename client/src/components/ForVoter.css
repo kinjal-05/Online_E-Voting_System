@@ -1,0 +1,126 @@
+/* ForVoter.css */
+
+/* Main container for results */
+.results-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .results-title {
+    text-align: center;
+    font-size: 36px;
+    color: #2980b9;
+    margin-bottom: 20px;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  /* Results container */
+  .results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Individual result card styling */
+  .result-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .candidate-name {
+    font-size: 24px;
+    color: #34495e;
+  }
+  
+  .party-name {
+    color: #2980b9;
+    font-weight: normal;
+  }
+  
+  .votes-count {
+    font-size: 18px;
+    color: #2ecc71;
+  }
+  
+  /* No results message */
+  .no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #95a5a6;
+  }
+  
+  /* Loading spinner */
+  .loading-container {
+    text-align: center;
+    font-size: 20px;
+    color: #2980b9;
+  }
+  
+  /* Back button */
+  .back-button {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .back-button:focus {
+    outline: none;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media screen and (max-width: 768px) {
+    .results-container {
+      padding: 20px;
+    }
+  
+    .results-title {
+      font-size: 28px;
+    }
+  
+    .result-card {
+      padding: 15px;
+    }
+  
+    .votes-count {
+      font-size: 16px;
+    }
+  
+    .back-button {
+      width: 150px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  

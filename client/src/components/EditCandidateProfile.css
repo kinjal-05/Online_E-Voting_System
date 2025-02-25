@@ -1,0 +1,77 @@
+/* EditCandidateProfile.css */
+
+/* Main container */
+.edit-profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #2980b9;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .edit-profile-form label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .edit-profile-form input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .edit-profile-form input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 20px;
+    color: #2980b9;
+    margin-top: 50px;
+  }
+  
