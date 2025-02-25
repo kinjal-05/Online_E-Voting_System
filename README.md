@@ -71,3 +71,48 @@ Online-E-Voting-System/
 │── .gitignore
 │── README.md
 ```
+
+## 🛠 <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.5em;">Setup & Installation</span>
+
+### 🔹 <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.3em;">Prerequisites</span>
+
+- <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Node.js (v16+)</span>
+- <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">MongoDB (Local/Atlas)</span>
+- <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Python (For ML Models - Optional)</span>
+- <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Stripe API Key (For Payments)</span>
+
+### 🔹 <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.3em;">Installation Steps</span>
+
+### 1️⃣ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1em;">Clone the Repository</span>
+
+```bash
+git clone https://github.com/kinjal-05/Online_E-Voting_System.git
+cd Online_E-Voting_System
+```
+### 2️⃣ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1em;">Setup Backend</span>
+```bash
+cd server
+npm install # Install dependencies
+```
+### <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Create a </span><code style="font-family: 'Courier New', Courier, monospace;">.env</code><span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> file in the </span><code style="font-family: 'Courier New', Courier, monospace;">server/</code><span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> directory:</span>
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+STRIPE_SECRET_KEY=your_stripe_key
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
+```
+### 3️⃣ <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1em;">Setup Frontend</span>
+```bash
+cd client
+npm install # Install dependencies
+```
+### <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Create a </span><code style="font-family: 'Courier New', Courier, monospace;">.env</code><span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> file in the </span><code style="font-family: 'Courier New', Courier, monospace;">client/</code><span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> directory:</span>
+```bash
+REACT_APP_API_URL=http://localhost:5000
+REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
+```
+```bash
+npm start
+```
