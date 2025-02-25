@@ -13,29 +13,27 @@ The Online E-Voting System is a web-based application built using the MERN (Mong
 📑 **Features**
 
 ### 🏛️ Admin Functionalities
-✅ Approve or reject voter & candidate registrations (facial/document verification via ML).
-✅ Manage elections, including creation, activation, and result declaration.
-✅ View voting statistics and generate reports (district/state/country-wise).
-✅ Restrict event postings during elections.
-✅ Verify candidate payments via Stripe.
+✅ Delete voter & candidate.<br>
+✅ Manage elections, including creation, activation, and result declaration.<br>
+✅ View voting statistics and generate reports.<br>
 
 ### 🏃 Candidate Functionalities
-✅ Register and complete document & facial scan verification.
-✅ Pay registration fees via Stripe.
-✅ Create, update, and delete campaign events (restricted during elections).
-✅ Receive election results via email notification.
+✅ Register and complete document & facial scan verification.<br>
+✅ Pay registration fees via Stripe.<br>
+✅ Create, update, and delete campaign events (restricted during elections).<br>
+✅ Receive election results via email notification.<br>
 
 ### 👥 Voter Functionalities
-✅ Register and complete document & facial scan verification.
-✅ Vote only during the election period (one vote per voter per district).
-✅ View and update profile details.
-✅ Receive email notifications for registration and voting actions.
+✅ Register and complete document & facial scan verification.<br>
+✅ Vote only during the election period (one vote per voter per district).<br>
+✅ View and update profile details.<br>
+✅ Receive email notifications for registration and voting actions.<br>
 
 ### 🔗 System Integrations
-✅ Facial Recognition ML API for voter and candidate verification.
-✅ Document Verification ML API for document authentication.
-✅ Stripe Payment Gateway for candidate registration fees.
-✅ Email Notifications for user approvals, voting confirmations, and results.
+✅ Facial Recognition ML API for voter and candidate verification.<br>
+✅ Document Verification ML API for document authentication.<br>
+✅ Stripe Payment Gateway for candidate registration fees.<br>
+✅ Email Notifications for user approvals, voting confirmations, and results.<br>
 
 ---
 
