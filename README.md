@@ -54,18 +54,20 @@ The Online E-Voting System is a web-based application built using the MERN (Mong
 📂 **Project Structure**
 
 ```plaintext
-
-client/
-│── src/
-│   ├── components/          # Reusable UI Components
-│   ├── pages/               # Main Pages (Dashboard, Voting, Profile)
-│   ├── assets/              # Images, Icons
-│   ├── context/             # State Management (Redux/Context API)
-│   ├── hooks/               # Custom React Hooks
-│   ├── styles/              # Tailwind CSS & Custom Styling
-│   ├── App.js               # Main React App
-│   ├── index.js             # React DOM Rendering
-│── public/                  # Static Files
-│── package.json
-│── .env
+Online-E-Voting-System/
+│── client/                # React.js frontend
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   ├── .env
+│── server/                # Node.js backend
+│   ├── models/            # Mongoose schemas
+│   ├── routes/            # API routes
+│   ├── controllers/       # Business logic
+│   ├── middleware/        # JWT, Authentication, ML Integration
+│   ├── config/            # Database & Stripe configuration
+│   ├── server.js
+│   ├── .env
+│── .gitignore
+│── README.md
 ```
