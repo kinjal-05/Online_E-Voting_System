@@ -9,8 +9,8 @@ const dotenv = require("dotenv");
 dotenv.config(); 
 
 
-sgMail.setApiKey("YOUR_SENDGROG_KEY");
-const stripe = require("stripe")("YOUR_STRIPE_KEY"); 
+sgMail.setApiKey(process.env.YOUR_SENDGROG_KEY);
+const stripe = require("stripe")(process.env.YOUR_STRIPE_KEY); 
 
 const isValidObjectId = (id) => mongoose.Types.ObjectId.isValid(id);
 
