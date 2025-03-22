@@ -10,8 +10,8 @@ const Vote = require("../models/Vote");
 const Candidate = require("../models/Candidate"); 
 const aadhaar_records = require("../models/aadhaar_records");
 dotenv.config();
-sgMail.setApiKey("YOUR_SENDGROG_KEY");
-const stripe = require("stripe")("YOUR_STRIPE_KEY"); 
+sgMail.setApiKey(process.env.YOUR_SENDGROG_KEY);
+const stripe = require("stripe")(process.env.YOUR_STRIPE_KEY); 
 
 exports.register = async (req, res) => {
   const { email, password, role } = req.body;
