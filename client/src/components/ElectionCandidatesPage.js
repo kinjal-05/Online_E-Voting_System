@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import './ElectionCandidatesPage.css'; 
+import "./ElectionCandidatesPage.css";
 
 const ElectionCandidatesPage = () => {
   const [candidates, setCandidates] = useState([]);
+  const [votedCandidateId, setVotedCandidateId] = useState(null);
   const [loading, setLoading] = useState(true);
   const { electionId } = useParams();
   const navigate = useNavigate();
-
- 
+  
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/elections/candidates/${electionId}`);
+        const response = await axios.get(
+          `http://localhost:5000/api/elections/candidates/${electionId}`
+        );
         setCandidates(response.data);
       } catch (error) {
         console.error("Error fetching candidates:", error);
@@ -23,39 +25,67 @@ const ElectionCandidatesPage = () => {
       }
     };
 
+    const checkIfVoted = async () => {
+      const currentUser = JSON.parse(localStorage.getItem("user"));
+      if (!currentUser || !currentUser._id) return;
+      try {
+        const voterResponse = await axios.get(
+          `http://localhost:5000/api/voters/votes/${currentUser._id}`
+        );
+        const voterData = voterResponse.data;
+
+        if (!voterData || !voterData._id) {
+          alert("Voter information not found.");
+          return;
+        }
+
+        const voterId = voterData._id;
+        const response = await axios.get(
+          `http://localhost:5000/api/votes/vote-status/${voterId}/${electionId}`
+        );
+
+        if (response.data.hasVoted) {
+          setVotedCandidateId(response.data.candidateId);
+        }
+      } catch (error) {
+        console.error("Error checking vote status:", error);
+      }
+    };
+
     fetchCandidates();
+    checkIfVoted();
   }, [electionId]);
 
- 
   const handleVote = async (candidateId) => {
-    const currentUser = JSON.parse(localStorage.getItem("user")); 
-    
+    if (votedCandidateId) {
+      alert("You have already voted in this election.");
+      return;
+    }
+
+    const currentUser = JSON.parse(localStorage.getItem("user"));
     if (!currentUser || !currentUser._id) {
       alert("User not authenticated.");
       return;
     }
-  
-    const userId = currentUser._id; 
-  
+
     try {
-      
-      const voterResponse = await axios.get(`http://localhost:5000/api/voters/votes/${userId}`);
+      const voterResponse = await axios.get(
+        `http://localhost:5000/api/voters/votes/${currentUser._id}`
+      );
       const voterData = voterResponse.data;
-  
+
       if (!voterData || !voterData._id) {
         alert("Voter information not found.");
         return;
       }
-  
-      const voterId = voterData._id; 
-  
-   
+
       const response = await axios.post(
         `http://localhost:5000/api/elections/vote/${electionId}`,
-        { candidateId, voterId, electionId } 
+        { candidateId, voterId: voterData._id, electionId }
       );
-  
+
       if (response.status === 200) {
+        setVotedCandidateId(candidateId);
         alert("Vote submitted successfully!");
       }
     } catch (err) {
@@ -63,7 +93,6 @@ const ElectionCandidatesPage = () => {
       alert("There was an error voting. Please try again.");
     }
   };
-  
 
   if (loading) {
     return <div className="loading-container">Loading candidates...</div>;
@@ -80,8 +109,12 @@ const ElectionCandidatesPage = () => {
                 {candidate.firstName} {candidate.lastName}
               </h3>
               <p className="candidate-party">Party: {candidate.party}</p>
-              <button className="vote-button" onClick={() => handleVote(candidate._id)}>
-                Vote
+              <button
+                className="vote-button"
+                onClick={() => handleVote(candidate._id)}
+                disabled={votedCandidateId !== null}
+              >
+                {votedCandidateId === candidate._id ? "Voted" : "Vote"}
               </button>
             </div>
           ))
@@ -95,3 +128,5 @@ const ElectionCandidatesPage = () => {
 };
 
 export default ElectionCandidatesPage;
+
+
