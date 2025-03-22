@@ -22,14 +22,14 @@ const electionRoutes = require("./routes/electionRoutes");
 const votersRoutes = require("./routes/voterRoutes");
 const voterRoutes = require("./routes/voteRoutes");
 const electionResultsRoute = require("./routes/electionResults");
-const stripe = require('stripe')("YOUR_STRIPE_KEY");
-
+const stripe = require('stripe')(process.env.YOUR_STRIPE_KEY);
+require('dotenv').config();
 app.use(express.json()); 
 app.use(cors()); 
 
 
 mongoose
-  .connect('YOUR_CONNECTION_STRING', { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.YOUR_CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("MongoDB Connection Error:", err));
 
