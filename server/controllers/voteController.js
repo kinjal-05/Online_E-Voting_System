@@ -5,8 +5,9 @@ const Candidate = require("../models/Candidate");
 const ElectionResult = require("../models/ElectionResult");
 const User = require("../models/User");
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey("YOUR_SENDGROG_KEY");
-const stripe = require("stripe")("YOUR_STRIPE_KEY"); 
+require('dotenv').config();
+sgMail.setApiKey(process.env.YOUR_SENDGROG_KEY);
+const stripe = require("stripe")(process.env.YOUR_STRIPE_KEY); 
 
 
 exports.declareElectionResults = async (req, res) => {
