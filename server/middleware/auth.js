@@ -1,6 +1,6 @@
 
 const jwt = require('jsonwebtoken');
-
+require('dotenv').config();
 const protect = (req, res, next) => {
   const token = req.headers.authorization && req.headers.authorization.split(' ')[1]; 
   if (!token) {
@@ -8,7 +8,7 @@ const protect = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, 'YOUR_TOKEN'); 
+    const decoded = jwt.verify(token, process.env.YOUR_TOKEN); 
     req.user = decoded; 
     next(); 
   } catch (err) {
