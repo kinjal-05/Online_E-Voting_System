@@ -6,6 +6,7 @@ const electionResultSchema = new mongoose.Schema({
   candidateId: { type: mongoose.Schema.Types.ObjectId, ref: "Candidate", required: true },
   candidateName: { type: String, required: true },
   party: { type: String, required: true },
+  name:{type: String, required: true},
   votes: { type: Number, required: true },
 });
 
