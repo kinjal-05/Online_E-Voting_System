@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"; 
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './ForAdmin.css';
+import "./ForAdmin.css";
 
 const ForAdmin = () => {
-  const [results, setResults] = useState([]);
+  const [groupedResults, setGroupedResults] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -12,10 +12,32 @@ const ForAdmin = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/election/election-results"); 
-        setResults(response.data);
+        const response = await axios.get("http://localhost:5000/api/election/election-results");
+        const electionResults = response.data;
+
+        if (!electionResults || electionResults.length === 0) {
+          setLoading(false);
+          return;
+        }
+
+        // Group results by election name
+        const groupedData = electionResults.reduce((acc, result) => {
+          const electionName = result.name || "Unknown Election"; // Ensure name is always available
+          if (!acc[electionName]) {
+            acc[electionName] = [];
+          }
+          acc[electionName].push(result);
+          return acc;
+        }, {});
+
+        // Sort each election's candidates by votes in descending order (highest first)
+        Object.keys(groupedData).forEach((election) => {
+          groupedData[election].sort((a, b) => b.votes - a.votes);
+        });
+
+        setGroupedResults(groupedData);
       } catch (err) {
-        setError("Error fetching election results.");
+        setError("Error fetching election results. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -30,18 +52,39 @@ const ForAdmin = () => {
   return (
     <div className="admin-results-container">
       <h1 className="admin-results-title">Election Results</h1>
-      {results.length > 0 ? (
-        <div className="results-list">
-          {results.map((result) => (
-            <div key={result._id} className="result-card">
-              <h3 className="candidate-name">{result.candidateName} <span className="party-name">({result.party})</span></h3>
-              <p className="votes-count">Votes: {result.votes}</p>
+
+      {Object.keys(groupedResults).length > 0 ? (
+        <div className="election-results-grid">
+          {Object.keys(groupedResults).map((electionName) => (
+            <div key={electionName} className="election-card">
+              <h2 className="election-name">{electionName}</h2>
+              <table className="results-table">
+                <thead>
+                  <tr>
+                    <th>Candidate</th>
+                    <th>Party</th>
+                    <th>Votes</th>
+                    <th>Winner</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {groupedResults[electionName].map((result, index) => (
+                    <tr key={result._id} className={index === 0 ? "winner-row" : ""}>
+                      <td>{result.candidateName}</td>
+                      <td>{result.party}</td>
+                      <td>{result.votes}</td>
+                      <td>{index === 0 ? "🏆 Winner" : ""}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           ))}
         </div>
       ) : (
         <p className="no-results">No results available.</p>
       )}
+
       <button className="back-button" onClick={() => navigate("/admin-panel")}>Back to Dashboard</button>
     </div>
   );
