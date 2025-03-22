@@ -2,8 +2,9 @@ const Voter = require("../models/Voter");
 const mongoose = require("mongoose");
 const User = require("../models/User"); 
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey("YOUR_SENDGROG_KEY");
-const stripe = require("stripe")("YOUR_STRIPE_KEY"); 
+require('dotenv').config();
+sgMail.setApiKey(process.env.YOUR_SENDGROG_KEY);
+const stripe = require("stripe")(process.env.YOUR_STRIPE_KEY); 
 
 exports.checkVoterStatus = async (req, res) => {
   try {
