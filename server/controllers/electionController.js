@@ -6,8 +6,9 @@ const Voter = require("../models/Voter");
 const Vote = require("../models/Vote");
 const User = require("../models/User");
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey("YOUR_SENDGROG_KEY");
-const stripe = require("stripe")("YOUR_STRIPE_KEY"); 
+require('dotenv').config();
+sgMail.setApiKey(process.env.YOUR_SENDGROG_KEY);
+const stripe = require("stripe")(process.env.YOUR_STRIPE_KEY); 
 
 const addElection = async (req, res) => {
   const { name, startDate, endDate, status, districts, resultsDeclared } = req.body;
