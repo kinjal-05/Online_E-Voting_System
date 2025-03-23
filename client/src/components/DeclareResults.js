@@ -12,7 +12,7 @@ const DeclareResults = () => {
   useEffect(() => {
     const fetchElections = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/elections/elections");
+        const response = await axios.get("https://online-e-voting-system.onrender.com/api/elections/elections");
         const completedElections = response.data.filter((election) => election.status === "completed");
         setElections(completedElections);
       } catch (err) {
@@ -29,7 +29,7 @@ const DeclareResults = () => {
   const handleDeclareResults = async (electionId) => {
     try {
       
-      const response = await axios.get(`http://localhost:5000/api/votes/votes/results/${electionId}`);
+      const response = await axios.get(`https://online-e-voting-system.onrender.com/api/votes/votes/results/${electionId}`);
       const winners = response.data.winners;
 
     
