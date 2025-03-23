@@ -54,7 +54,7 @@ const Register = () => {
           >
             <option value="voter">Voter</option>
             <option value="candidate">Candidate</option>
-            <option value="admin">Admin</option>
+            
           </select>
           <button type="submit" className="submit-button">Register</button>
         </form>
