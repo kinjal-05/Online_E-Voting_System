@@ -12,7 +12,7 @@ const ViewResults = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/election/election-results"); 
+        const response = await axios.get("https://online-e-voting-system.onrender.com/api/election/election-results"); 
         setResults(response.data);
       } catch (err) {
         setError("Error fetching election results.");
