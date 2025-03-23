@@ -70,7 +70,7 @@ const VoterDashboard = () => {
     if (confirmDelete) {
       const token = localStorage.getItem("token");
       try {
-        await axios.delete(`http://localhost:5000/api/users/voters/delete/${user._id}`);
+        await axios.delete(`https://online-e-voting-system.onrender.com/api/users/voters/delete/${user._id}`);
 
         alert("Your account has been deleted.");
         logout();
