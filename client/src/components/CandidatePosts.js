@@ -29,7 +29,7 @@ const CandidatePanel = () => {
 
     const fetchCandidateInfo = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/candidates/candidates/${user._id}`);
+        const response = await axios.get(`https://online-e-voting-system.onrender.com/api/candidates/candidates/${user._id}`);
         console.log("Backend Response:", response); 
 
         if (response.data) {
