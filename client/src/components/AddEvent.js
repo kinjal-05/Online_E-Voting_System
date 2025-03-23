@@ -23,7 +23,7 @@ const AddEvent = () => {
     const fetchCandidate = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/candidates/candidates/${user._id}`,
+          `https://online-e-voting-system.onrender.com/api/candidates/candidates/${user._id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
