@@ -34,7 +34,7 @@ const RegisterCandidate = () => {
     } else {
       const fetchUserId = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/api/users/by-email/${user.email}`);
+          const response = await axios.get(`https://online-e-voting-system.onrender.com/api/users/by-email/${user.email}`);
           if (response.status === 200 && response.data) {
             setUserId(response.data._id);
           }
@@ -132,7 +132,7 @@ const RegisterCandidate = () => {
     setMessage("");
 
     try {
-      const { data } = await axios.post("http://localhost:5000/api/payment-intent", { amount: 50 });
+      const { data } = await axios.post("https://online-e-voting-system.onrender.com/api/payment-intent", { amount: 50 });
 
       const result = await stripe.confirmCardPayment(data.clientSecret, {
         payment_method: {
@@ -177,7 +177,7 @@ const RegisterCandidate = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/candidates/candidates/register", {
+      const response = await axios.post("https://online-e-voting-system.onrender.com/api/candidates/candidates/register", {
         userId,
         firstName,
         lastName,
