@@ -53,7 +53,7 @@ const AdminDashboard = () => {
         <h2>Manage Users</h2>
         <button className="dashboard-button" onClick={handleManageCandidates}>Manage Candidates</button>
         <button className="dashboard-button" onClick={handleManageVoters}>Manage Voters</button>
-        <button className="dashboard-button" onClick={handleManageSupportTeam}>Manage Support Team</button>
+    
       </div>
 
       
