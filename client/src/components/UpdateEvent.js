@@ -18,7 +18,7 @@ const UpdateEvent = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/events/events/${eventId}`);
+        const response = await axios.get(`https://online-e-voting-system.onrender.com/api/events/events/${eventId}`);
         setEvent({
           title: response.data.title,
           description: response.data.description,
@@ -43,7 +43,7 @@ const UpdateEvent = () => {
     setSuccess("");
 
     try {
-      await axios.put(`http://localhost:5000/api/events/events/${eventId}`, event);
+      await axios.put(`https://online-e-voting-system.onrender.com/api/events/events/${eventId}`, event);
       setSuccess("Event updated successfully!");
       setTimeout(() => navigate("/candidate-events"), 2000);
     } catch (err) {
