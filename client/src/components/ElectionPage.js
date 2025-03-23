@@ -23,7 +23,7 @@ const ElectionPage = () => {
   
   const fetchVoterDistrict = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/voters/votes/${userId}`);
+      const response = await axios.get(`https://online-e-voting-system.onrender.com/api/voters/votes/${userId}`);
       if (response.data) {
         const voterData = response.data;
         setDistrict(voterData.district);
@@ -39,7 +39,7 @@ const ElectionPage = () => {
  
   const fetchElections = async (voterDistrict) => {
     try {
-      const response = await axios.get("http://localhost:5000/api/elections/elections");
+      const response = await axios.get("https://online-e-voting-system.onrender.com/api/elections/elections");
       
       const filteredElections = response.data.filter(
         (election) =>
