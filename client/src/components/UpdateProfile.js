@@ -32,7 +32,7 @@ const UpdateProfile = () => {
   
   const fetchUserProfile = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/voters/votes/${userId}`);
+      const response = await axios.get(`https://online-e-voting-system.onrender.com/api/voters/votes/${userId}`);
       setFormData(response.data); 
       setUser((prevUser) => ({
         ...prevUser,
@@ -63,7 +63,7 @@ const UpdateProfile = () => {
     try {
       setLoading(true);
       const response = await axios.put(
-        `http://localhost:5000/api/voters/votes/${user._id}`,
+        `https://online-e-voting-system.onrender.com/api/voters/votes/${user._id}`,
         formData
       );
       alert("Profile updated successfully!");
