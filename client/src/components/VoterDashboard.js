@@ -25,7 +25,7 @@ const VoterDashboard = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/voters/votes/${userId}`,
+        `https://online-e-voting-system.onrender.com/api/voters/votes/${userId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
