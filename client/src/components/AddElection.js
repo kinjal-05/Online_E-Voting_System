@@ -39,7 +39,7 @@ const AddElection = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/elections/elections", {
+      const response = await axios.post("https://online-e-voting-system.onrender.com/api/elections/elections", {
         name,
         startDate,
         endDate,
