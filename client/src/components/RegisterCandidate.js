@@ -104,7 +104,7 @@ const RegisterCandidate = () => {
     formData.append("userId", userId);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8080/extract-aadhaar", formData, {
+      const response = await axios.post("https://adhaarcard-detection-1.onrender.com/extract-aadhaar", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
