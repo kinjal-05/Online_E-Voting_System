@@ -11,7 +11,7 @@ const ManageSupportTeam = () => {
   useEffect(() => {
     const fetchAdmins = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/users/users/admins");
+        const response = await axios.get("https://online-e-voting-system.onrender.com/api/users/users/admins");
         setAdmins(response.data);
       } catch (err) {
         console.error("Error fetching admin users:", err);
