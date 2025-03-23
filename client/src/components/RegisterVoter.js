@@ -125,7 +125,7 @@ const RegisterVoter = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/voters/voter/register", {
+      await axios.post("https://online-e-voting-system.onrender.com/api/voters/voter/register", {
         userId: user?._id,
         ...formData,
       });
