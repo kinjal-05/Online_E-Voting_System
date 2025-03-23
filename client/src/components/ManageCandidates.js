@@ -14,7 +14,7 @@ const ManageCandidates = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.get("http://localhost:5000/api/candidates/candidates");
+      const response = await axios.get("https://online-e-voting-system.onrender.com/api/candidates/candidates");
       setCandidates(response.data);
     } catch (err) {
       setError("Error fetching candidates");
@@ -27,7 +27,7 @@ const ManageCandidates = () => {
   const handleDeleteCandidate = async (candidateId) => {
     if (window.confirm("Are you sure you want to delete this candidate?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/candidates/candidates/${candidateId}`);
+        await axios.delete(`https://online-e-voting-system.onrender.com/api/candidates/candidates/${candidateId}`);
         fetchCandidates(); 
       } catch (err) {
         setError("Error deleting candidate");
