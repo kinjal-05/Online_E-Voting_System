@@ -114,3 +114,6 @@ REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
 ```bash
 npm start
 ```
+
+🚀 **Deployment**
+https://kinjal-mistry-e-voting-system.onrender.com
