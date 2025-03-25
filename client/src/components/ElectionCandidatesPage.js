@@ -30,7 +30,7 @@ const ElectionCandidatesPage = () => {
       if (!currentUser || !currentUser._id) return;
       try {
         const voterResponse = await axios.get(
-          `http://localhost:5000/api/voters/votes/${currentUser._id}`
+          `https://online-e-voting-system.onrender.com/api/voters/votes/${currentUser._id}`
         );
         const voterData = voterResponse.data;
 
