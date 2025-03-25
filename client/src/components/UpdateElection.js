@@ -82,7 +82,7 @@ const UpdateElection = () => {
     setSuccess("");
 
     try {
-      await axios.put(`http://localhost:5000/api/elections/elections/${electionId}`, {
+      await axios.put(`https://online-e-voting-system.onrender.com/api/elections/elections/${electionId}`, {
         ...election,
         districts: election.districts.filter((d) => d.trim() !== ""),
       });
