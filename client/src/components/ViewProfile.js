@@ -23,7 +23,7 @@ const ViewProfile = () => {
     const token = localStorage.getItem("token"); 
     try {
       const response = await axios.get(
-        `https://online-e-voting-system.onrender.com/api/voters/votes/${userId}`,
+        `https://voteguard-backend.onrender.com/api/voters/votes/${userId}`,
         {
           headers: { Authorization: `Bearer ${token}` }, 
         }
