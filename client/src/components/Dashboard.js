@@ -16,7 +16,7 @@ const Dashboard = () => {
     
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("https://online-e-voting-system.onrender.com/api/events/events");
+        const response = await axios.get("https://voteguard-backend.onrender.com/api/events/events");
         setEvents(response.data);
       } catch (err) {
         setError("Error fetching events.");
