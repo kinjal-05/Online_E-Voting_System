@@ -22,7 +22,7 @@ const ShowAllElections = () => {
 
   const fetchCandidate = async (userId) => {
     try {
-      const response = await axios.get(`https://online-e-voting-system.onrender.com/api/candidates/candidates/${userId}`);
+      const response = await axios.get(`https://voteguard-backend.onrender.com/api/candidates/candidates/${userId}`);
       setCandidate(response.data);
     } catch (error) {
       console.error("Error fetching candidate data:", error);
@@ -32,7 +32,7 @@ const ShowAllElections = () => {
   useEffect(() => {
     const fetchElections = async () => {
       try {
-        const response = await axios.get("https://online-e-voting-system.onrender.com/api/elections/elections");
+        const response = await axios.get("https://voteguard-backend.onrender.com/api/elections/elections");
         const upcomingElections = response.data.filter(election => election.status === "upcoming");
         setElections(upcomingElections);
       } catch (error) {
@@ -52,7 +52,7 @@ const ShowAllElections = () => {
     }
 
     try {
-      const response = await axios.post("https://online-e-voting-system.onrender.com/api/elections/elections/register", {
+      const response = await axios.post("https://voteguard-backend.onrender.com/api/elections/elections/register", {
         electionId,
         candidateId: candidate._id,
       });
