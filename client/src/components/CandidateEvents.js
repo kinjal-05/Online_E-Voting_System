@@ -21,7 +21,7 @@ const CandidateEvents = () => {
 
       try {
         const response = await axios.get(
-          `https://online-e-voting-system.onrender.com/api/candidates/candidates/${user._id}`
+          `https://voteguard-backend.onrender.com/api/candidates/candidates/${user._id}`
         );
         setCandidate(response.data);
       } catch (err) {
@@ -39,7 +39,7 @@ const CandidateEvents = () => {
 
       try {
         const eventsResponse = await axios.get(
-          `https://online-e-voting-system.onrender.com/api/candidates/candidates/${candidate._id}/events`
+          `https://voteguard-backend.onrender.com/api/candidates/candidates/${candidate._id}/events`
         );
 
         if (!eventsResponse.data.events || eventsResponse.data.events.length === 0) {
@@ -52,7 +52,7 @@ const CandidateEvents = () => {
           eventsResponse.data.events.map(async (event) => {
             try {
               const eventDetails = await axios.get(
-                `https://online-e-voting-system.onrender.com/api/events/events/${event._id}`
+                `https://voteguard-backend.onrender.com/api/events/events/${event._id}`
               );
               return eventDetails.data;
             } catch (error) {
@@ -78,7 +78,7 @@ const CandidateEvents = () => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
 
     try {
-      await axios.delete(`https://online-e-voting-system.onrender.com/api/events/events/${eventId}`);
+      await axios.delete(`https://voteguard-backend.onrender.com/api/events/events/${eventId}`);
       setEvents(events.filter((event) => event._id !== eventId));
     } catch (err) {
       console.error("Error deleting event:", err);
