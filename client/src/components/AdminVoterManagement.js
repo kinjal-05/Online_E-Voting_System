@@ -15,7 +15,7 @@ const AdminVoterManagement = () => {
 
   const fetchVoters = async () => {
     try {
-      const response = await axios.get("https://online-e-voting-system.onrender.com/api/voters/voters"); 
+      const response = await axios.get("https://voteguard-backend.onrender.com/api/voters/voters"); 
       setVoters(response.data);
     } catch (error) {
       console.error("Error fetching voters:", error);
@@ -25,7 +25,7 @@ const AdminVoterManagement = () => {
   const handleDeleteVoter = async (voterId) => {
     if (window.confirm("Are you sure you want to delete this voter?")) {
       try {
-        await axios.delete(`https://online-e-voting-system.onrender.com/api/voters/voters/${voterId}`); 
+        await axios.delete(`https://voteguard-backend.onrender.com/api/voters/voters/${voterId}`); 
         setVoters(voters.filter((voter) => voter._id !== voterId));
       } catch (error) {
         console.error("Error deleting voter:", error);
