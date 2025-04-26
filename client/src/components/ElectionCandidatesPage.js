@@ -14,7 +14,7 @@ const ElectionCandidatesPage = () => {
     const fetchCandidates = async () => {
       try {
         const response = await axios.get(
-          `https://online-e-voting-system.onrender.com/api/elections/candidates/${electionId}`
+          `https://voteguard-backend.onrender.com/api/elections/candidates/${electionId}`
         );
         setCandidates(response.data);
       } catch (error) {
@@ -30,7 +30,7 @@ const ElectionCandidatesPage = () => {
       if (!currentUser || !currentUser._id) return;
       try {
         const voterResponse = await axios.get(
-          `https://online-e-voting-system.onrender.com/api/voters/votes/${currentUser._id}`
+          `https://voteguard-backend.onrender.com/api/voters/votes/${currentUser._id}`
         );
         const voterData = voterResponse.data;
 
@@ -41,7 +41,7 @@ const ElectionCandidatesPage = () => {
 
         const voterId = voterData._id;
         const response = await axios.get(
-          `https://online-e-voting-system.onrender.com/api/votes/vote-status/${voterId}/${electionId}`
+          `https://voteguard-backend.onrender.com/api/votes/vote-status/${voterId}/${electionId}`
         );
 
         if (response.data.hasVoted) {
@@ -70,7 +70,7 @@ const ElectionCandidatesPage = () => {
 
     try {
       const voterResponse = await axios.get(
-        `https://online-e-voting-system.onrender.com/api/voters/votes/${currentUser._id}`
+        `https://voteguard-backend.onrender.com/api/voters/votes/${currentUser._id}`
       );
       const voterData = voterResponse.data;
 
@@ -80,7 +80,7 @@ const ElectionCandidatesPage = () => {
       }
 
       const response = await axios.post(
-        `https://online-e-voting-system.onrender.com/api/elections/vote/${electionId}`,
+        `https://voteguard-backend.onrender.com/api/elections/vote/${electionId}`,
         { candidateId, voterId: voterData._id, electionId }
       );
 
