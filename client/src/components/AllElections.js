@@ -13,7 +13,7 @@ const AllElections = () => {
     setLoading(true);
     setError(""); 
     try {
-      const response = await axios.get("https://online-e-voting-system.onrender.com/api/elections/elections");
+      const response = await axios.get("https://voteguard-backend.onrender.com/api/elections/elections");
       setElections(response.data); 
     } catch (err) {
       setError("Error fetching elections");
@@ -29,7 +29,7 @@ const AllElections = () => {
   const handleDeleteElection = async (electionId) => {
     if (window.confirm("Are you sure you want to delete this election?")) {
       try {
-        await axios.delete(`https://online-e-voting-system.onrender.com/api/elections/elections/${electionId}`);
+        await axios.delete(`https://voteguard-backend.onrender.com/api/elections/elections/${electionId}`);
         fetchElections(); 
       } catch (err) {
         setError("Error deleting election");
