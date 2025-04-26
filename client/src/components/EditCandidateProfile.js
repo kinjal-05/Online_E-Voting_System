@@ -29,7 +29,7 @@ const EditCandidateProfile = () => {
 
     const fetchCandidateInfo = async () => {
       try {
-        const response = await axios.get(`https://online-e-voting-system.onrender.com/api/candidates/candidates/${userId}`);
+        const response = await axios.get(`https://voteguard-backend.onrender.com/api/candidates/candidates/${userId}`);
         if (response.data) {
           setCandidateInfo(response.data);
         }
@@ -55,7 +55,7 @@ const EditCandidateProfile = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`https://online-e-voting-system.onrender.com/api/candidates/candidates/${userId}`, candidateInfo, {
+      await axios.put(`https://voteguard-backend.onrender.com/api/candidates/candidates/${userId}`, candidateInfo, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
