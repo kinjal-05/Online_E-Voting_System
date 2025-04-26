@@ -30,12 +30,12 @@ const CandidatePanel = () => {
     const fetchCandidateInfo = async () => {
       try {
         const candidateResponse = await axios.get(
-          `https://online-e-voting-system.onrender.com/api/candidates/candidates/${user._id}`
+          `https://voteguard-backend.onrender.com/api/candidates/candidates/${user._id}`
         );
         setCandidateInfo(candidateResponse.data);
 
         const postsResponse = await axios.get(
-          `https://online-e-voting-system.onrender.com/api/posts/candidate/${user._id}`
+          `https://voteguard-backend.onrender.com/api/posts/candidate/${user._id}`
         );
         setPosts(postsResponse.data);
       } catch (err) {
@@ -85,7 +85,7 @@ const CandidatePanel = () => {
     if (confirmDelete) {
       const token = localStorage.getItem("token");
       try {
-        await axios.delete(`https://online-e-voting-system.onrender.com/api/users/voters/delete/${user._id}`);
+        await axios.delete(`https://voteguard-backend.onrender.com/api/users/voters/delete/${user._id}`);
 
         alert("Your account has been deleted.");
         logout();
