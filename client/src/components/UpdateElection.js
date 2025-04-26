@@ -24,7 +24,7 @@ const UpdateElection = () => {
     const fetchElection = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`https://online-e-voting-system.onrender.com/api/elections/elections/${electionId}`);
+        const response = await axios.get(`https://voteguard-backend.onrender.com/api/elections/elections/${electionId}`);
         const { name, startDate, endDate, status, districts, resultsDeclared } = response.data;
         setElection({
           name,
@@ -45,7 +45,7 @@ const UpdateElection = () => {
 
   const fetchElectionResults = async (id) => {
     try {
-      const response = await axios.get(`https://online-e-voting-system.onrender.com/api/votes/votes/results/${id}`);
+      const response = await axios.get(`https://voteguard-backend.onrender.com/api/votes/votes/results/${id}`);
       setResults(response.data.voteResults);
     } catch (err) {
       setError("Error fetching election results");
@@ -82,7 +82,7 @@ const UpdateElection = () => {
     setSuccess("");
 
     try {
-      await axios.put(`https://online-e-voting-system.onrender.com/api/elections/elections/${electionId}`, {
+      await axios.put(`https://voteguard-backend.onrender.com/api/elections/elections/${electionId}`, {
         ...election,
         districts: election.districts.filter((d) => d.trim() !== ""),
       });
