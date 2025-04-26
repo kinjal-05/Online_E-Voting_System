@@ -18,7 +18,7 @@ const ViewCandidateProfile = () => {
     const fetchCandidateProfile = async () => {
       try {
         const response = await axios.get(
-          `https://online-e-voting-system.onrender.com/api/candidates/candidates/${location.state.userId}`
+          `https://voteguard-backend.onrender.com/api/candidates/candidates/${location.state.userId}`
         );
         setCandidate(response.data);
       } catch (error) {
