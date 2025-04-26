@@ -12,7 +12,7 @@ const ForAdmin = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get("https://online-e-voting-system.onrender.com/api/election/election-results");
+        const response = await axios.get("https://voteguard-backend.onrender.com/api/election/election-results");
         const electionResults = response.data;
 
         if (!electionResults || electionResults.length === 0) {
