@@ -25,7 +25,7 @@ const VoterDashboard = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.get(
-        `https://online-e-voting-system.onrender.com/api/voters/votes/${userId}`,
+        `https://voteguard-backend.onrender.com/api/voters/votes/${userId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -70,7 +70,7 @@ const VoterDashboard = () => {
     if (confirmDelete) {
       const token = localStorage.getItem("token");
       try {
-        await axios.delete(`https://online-e-voting-system.onrender.com/api/users/voters/delete/${user._id}`);
+        await axios.delete(`https://voteguard-backend.onrender.com/api/users/voters/delete/${user._id}`);
 
         alert("Your account has been deleted.");
         logout();
