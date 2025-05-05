@@ -1,86 +1,57 @@
-/* Main container for the register page */
-.register-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(to right, #6a11cb, #2575fc); /* Background gradient */
-  font-family: 'Poppins', sans-serif;
-}
+
+
 
 .register-form-container {
-  background: #fff; /* White background for the form */
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 400px; /* Form width */
-}
-
-.register-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  max-width: 400px;
   text-align: center;
-  color: #333; /* Dark text for the header */
+  margin:30% 5%
 }
-
-.register-form {
-  display: flex;
-  flex-direction: column;
+.register-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2c3e50;
 }
 
 .input-field {
+  width: 100%;
   padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
+  margin: 12px 0;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.3s;
+  font-size: 16px;
 }
 
 .input-field:focus {
-  border-color: #ff4f81; /* Focused input color */
-  box-shadow: 0px 0px 8px rgba(255, 79, 129, 0.3); /* Input focus shadow */
-}
-
-select.input-field {
-  background: #fff;
-  cursor: pointer;
+  border-color: #3498db;
+  outline: none;
 }
 
 .submit-button {
-  padding: 14px;
-  background: linear-gradient(45deg, #ff7eb3, #ff4f81); /* Gradient background for the button */
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #3498db;
   color: white;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
   cursor: pointer;
-  transition: 0.3s;
-  text-transform: uppercase;
-  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .submit-button:hover {
-  background: linear-gradient(45deg, #ff4f81, #2eff58); /* Hover effect */
-  transform: scale(1.05);
-  box-shadow: 0px 4px 15px rgba(255, 79, 129, 0.5);
+  background-color: #2980b9;
 }
 
 .error-message {
   color: red;
-  text-align: center;
-  margin-top: 10px;
-}
-
-@media (max-width: 480px) {
-  .register-form-container {
-    width: 90%;
-    padding: 30px;
-  }
-
-  .register-title {
-    font-size: 1.8rem;
-  }
+  margin-bottom: 10px;
+  font-size: 14px;
 }
