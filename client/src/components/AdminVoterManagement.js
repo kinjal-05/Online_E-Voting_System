@@ -35,12 +35,13 @@ const AdminVoterManagement = () => {
 
   return (
     <div className="admin-voter-management">
-      <h1>Admin Voter Management</h1>
-      <p className="welcome-text">Welcome to the Admin Voter Management Page!</p>
+      <button className="back-btn" onClick={() => navigate("/admin-panel")}>Back to Admin Panel</button>
+      <h1>Manage Voters</h1>
+      
 
      
       <div className="voter-table-container">
-        <h2>All Voters</h2>
+        
         <table className="voter-table">
           <thead>
             <tr>
@@ -75,7 +76,7 @@ const AdminVoterManagement = () => {
         </table>
       </div>
 
-      <button className="back-btn" onClick={() => navigate("/admin-panel")}>Back to Admin Panel</button>
+      
     </div>
   );
 };
