@@ -63,7 +63,9 @@ const AddElection = () => {
 
   return (
     <div className="add-election-container">
-      <h1>Add Election</h1>
+     <h1 style={{ color: 'black', fontWeight: 'bold' }}>Add Election</h1>
+
+
       <form onSubmit={handleSubmit} className="election-form">
         <div className="form-group">
           <label htmlFor="name">Election Name</label>
@@ -142,15 +144,7 @@ const AddElection = () => {
           </button>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="resultsDeclared">Results Declared</label>
-          <input
-            type="checkbox"
-            id="resultsDeclared"
-            checked={resultsDeclared}
-            onChange={() => setResultsDeclared(!resultsDeclared)}
-          />
-        </div>
+      
 
         <button type="submit" className="submit-button">Add Election</button>
         <button type="button" className="btn btn-secondary" onClick={() => navigate("/admin-panel")}>
