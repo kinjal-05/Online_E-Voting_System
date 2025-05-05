@@ -1,89 +1,116 @@
 /* AddEvent.css */
 
-/* Main container */
 .add-event-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  width:200%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto 50px -100px;
+}
+
+.add-event-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error-message, .success-message {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-message {
+  color: green;
+}
+
+.add-event-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.input-field {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.submit-btn, .btn-secondary {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  width: 100%;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.btn-secondary {
+  background-color: #FF6347;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #e55347;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .add-event-container {
+    padding: 20px;
+    width: 90%;
   }
-  
+
   .add-event-title {
-    text-align: center;
-    color: #2980b9;
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
   }
-  
-  .error-message {
-    color: #e74c3c;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .success-message {
-    color: #2ecc71;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .add-event-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .add-event-form label {
-    font-size: 16px;
-    color: #333;
-  }
-  
+
   .input-field {
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    font-size: 0.9rem;
+    padding: 10px;
   }
-  
-  .input-field:focus {
-    border-color: #3498db;
-    outline: none;
+
+  .submit-btn, .btn-secondary {
+    font-size: 0.9rem;
+    padding: 10px;
   }
-  
-  .submit-btn {
-    background-color: #3498db;
-    color: white;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #2980b9;
-  }
-  
-  .submit-btn:disabled {
-    background-color: #95a5a6;
-    cursor: not-allowed;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .add-event-container {
-      padding: 20px;
-      width: 100%;
-    }
-  }
-  
+}
