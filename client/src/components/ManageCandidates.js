@@ -41,7 +41,8 @@ const ManageCandidates = () => {
 
   return (
     <div className="manage-candidates-container">
-      <h1>Manage Candidates</h1>
+      <button className="back-btn" onClick={() => navigate("/admin-panel")}>Back to Admin Panel</button>
+      <h1 style={{ fontWeight: 'bold', color: 'White', textAlign: 'center' }}>Manage Candidates</h1>
       {loading && <p className="loading-text">Loading candidates...</p>}
       {error && <p className="error-message">{error}</p>}
 
@@ -76,7 +77,7 @@ const ManageCandidates = () => {
         </table>
       </div>
 
-      <button className="back-btn" onClick={() => navigate("/admin-panel")}>Back to Admin Panel</button>
+      
     </div>
   );
 };
