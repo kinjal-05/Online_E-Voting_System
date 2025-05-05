@@ -139,6 +139,7 @@ const RegisterVoter = () => {
   };
 
   return (
+    <div className="full-page-wrapper">
     <div className="register-container">
       <h2 className="register-title">Register as a Voter</h2>
       {user && (
@@ -225,6 +226,7 @@ const RegisterVoter = () => {
           <button type="submit" disabled={loading}>{loading ? "Registering..." : "Register as Voter"}</button>
         </form>
       )}
+    </div>
     </div>
   );
 };
