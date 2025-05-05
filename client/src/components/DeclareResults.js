@@ -47,6 +47,9 @@ const DeclareResults = () => {
 
   return (
     <div className="declare-results-container">
+       <button className="back-btn" onClick={() => navigate("/admin-panel")}>
+    ← Back to Admin Panel
+  </button>
       <h1 className="page-title">Declared Election Results</h1>
 
       {loading && <div className="loading">Loading...</div>}
@@ -82,9 +85,7 @@ const DeclareResults = () => {
         <p>No completed elections available.</p>
       )}
 
-      <button className="back-btn" onClick={() => navigate("/admin-panel")}>
-        Back to Admin Panel
-      </button>
+      
     </div>
   );
 };
