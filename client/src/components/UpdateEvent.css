@@ -1,20 +1,15 @@
 /* General Styling */
-.update-event-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-  }
+
   
   .update-event-card {
     background: white;
     padding: 30px;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
+    margin:40px;
   }
   
   /* Title */
