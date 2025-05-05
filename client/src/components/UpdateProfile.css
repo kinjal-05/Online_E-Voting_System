@@ -1,120 +1,108 @@
-/* Container for the profile update form */
+/* UpdateProfile.css */
+
 .profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
   max-width: 700px;
-  margin: 50px auto;
+  margin: 40px 10px 30px -100px;
+  width:200%;
+  padding: 40px 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Title of the profile update form */
 .profile-title {
   text-align: center;
   font-size: 28px;
   color: #333;
-  margin-bottom: 20px;
-  font-weight: 600;
+  margin-bottom: 30px;
 }
 
-/* Form styling */
 .profile-form {
-  width: 100%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px 20px;
+  padding:20px 20px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Label styling */
-.form-group label {
-  font-size: 16px;
-  color: #1e90ff;  /* Blue color for labels */
-  margin-bottom: 8px;
-  display: block;
-  font-weight: 500;
+label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
 }
 
-/* Input field styling */
 .form-input {
-  width: 100%;
   padding: 12px;
-  margin-top: 8px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
   font-size: 16px;
-  color: #333;
-  outline: none;
-  transition: border 0.3s ease;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border 0.3s;
 }
 
 .form-input:focus {
-  border-color: #1e90ff;  /* Blue color on focus */
+  border-color: #007bff;
+  outline: none;
 }
 
 .form-submit {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .submit-btn {
-  width: 100%;
-  padding: 14px;
-  background-color: #1e90ff;  /* Blue button */
+  background-color: #007bff;
   color: white;
+  padding: 12px 24px;
+  font-size: 16px;
   border: none;
-  border-radius: 8px;
-  font-size: 18px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-  background-color: #0056b3;  /* Darker blue on hover */
+  background-color: #0056b3;
 }
 
 .submit-btn:disabled {
-  background-color: #b0c4de;
+  background-color: #a6c8f0;
   cursor: not-allowed;
 }
 
-.btn-secondary {
-  padding: 12px;
-  background-color: #f0f0f0;
-  color: #333;
+.btn.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  padding: 12px 24px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  margin-top: 10px;
   transition: background-color 0.3s ease;
-  margin-top: 15px;
-  width: 100%;
 }
 
-.btn-secondary:hover {
-  background-color: #ddd;
+.btn.btn-secondary:hover {
+  background-color: #5a6268;
 }
 
-/* Loading text */
 .loading {
   text-align: center;
   font-size: 18px;
-  color: #1e90ff;
-  font-weight: bold;
+  color: #333;
+  padding: 40px;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .profile-container {
     padding: 20px;
+    margin: 20px;
+  }
+
+  .submit-btn,
+  .btn.btn-secondary {
     width: 100%;
   }
 }
