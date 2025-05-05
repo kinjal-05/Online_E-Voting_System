@@ -1,85 +1,140 @@
-/* AdminVoterManagement.css */
-
-/* Main container for the page */
+/* Main container for Admin Voter Management */
 .admin-voter-management {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 40px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
   
-  h1 {
-    text-align: center;
-    color: #2980b9;
-    font-size: 32px;
-    margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Image */
+.admin-voter-management::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1543971130-14256130ff35'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Dimmed background */
+  z-index: -1;
+}
+
+/* Title */
+.admin-voter-management h1 {
+  text-align: center;
+  color: rgb(247, 243, 243);
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Button to go back to admin panel */
+.back-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Table container */
+.voter-table-container {
+  overflow-x: auto;
+}
+
+/* Voter Table */
+.voter-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  font-size: 16px;
+}
+
+/* Table Header */
+.voter-table th {
+  background-color: #2980b9;
+  color: rgb(8, 8, 8);
+  padding: 12px;
+  text-align: left;
+  font-size: 26px;
+  width:100%;
+  border: 1px solid #1f618d; /* Border for header cells */
+}
+
+/* Table Rows */
+.voter-table td {
+  background-color: #fafcfd;
+  color: rgb(8, 8, 8);
+  padding: 12px;
+  text-align: left;
+  font-size: 26px;
+  border: 1px solid #1f618d; /* Border for header cells */
+}
+
+
+
+
+
+/* Action Button */
+.delete-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Loading and Error messages */
+.loading-text, .error-message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #e74c3c;
+}
+
+.loading-text {
+  color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-voter-management {
+    padding: 20px;
   }
-  
-  .welcome-text {
-    text-align: center;
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .voter-table-container {
-    margin-top: 20px;
-  }
-  
-  .voter-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
+
   .voter-table th, .voter-table td {
-    padding: 12px;
-    text-align: left;
-    font-size: 16px;
+    font-size: 14px;
   }
-  
-  .voter-table th {
-    background-color: #2980b9;
-    color: white;
-  }
-  
-  .voter-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .voter-table tbody tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .delete-btn {
-    padding: 6px 12px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .delete-btn:hover {
-    background-color: #c0392b;
-  }
-  
+
   .back-btn {
-    padding: 12px 25px;
-    background-color: #3498db;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto;
+    font-size: 14px;
   }
-  
-  .back-btn:hover {
-    background-color: #2980b9;
-  }
-  
+}
