@@ -26,7 +26,7 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
+   
       <div className="register-form-container">
         <h2 className="register-title">Register</h2>
         {error && <p className="error-message">{error}</p>}
@@ -60,7 +60,7 @@ const Register = () => {
         </form>
 
       </div>
-    </div>
+   
   );
 };
 
