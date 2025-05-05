@@ -98,7 +98,8 @@ const UpdateElection = () => {
 
   return (
     <div className="update-election-container">
-      <h1>Update Election</h1>
+      <h1 style={{ fontWeight: 'bold', color: 'black', textAlign: 'center' }}>Update Election</h1>
+
       {loading && <p className="loading-text">Loading...</p>}
       {error && <p className="error-message">{error}</p>}
       {success && <p className="success-message">{success}</p>}
@@ -147,18 +148,7 @@ const UpdateElection = () => {
           <button type="button" className="add-district-btn" onClick={handleAddDistrict}>Add District</button>
         </div>
 
-        {election.status === "completed" && (
-          <div className="form-group">
-            <label>
-              <input
-                type="checkbox"
-                checked={election.resultDeclared}
-                onChange={handleResultDeclareChange}
-              />
-              Declare Results
-            </label>
-          </div>
-        )}
+       
 
         <button type="submit" className="submit-btn">Update Election</button>
         <button type="button" className="btn btn-secondary" onClick={() => navigate("/all-elections")}>
