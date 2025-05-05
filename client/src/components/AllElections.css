@@ -1,108 +1,152 @@
-/* AllElections.css */
-
+/* Main container for All Elections */
 .all-elections-container {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 50px auto;
   padding: 40px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
+/* Background Image */
+.all-elections-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1950&q=80'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Dimmed background */
+  z-index: -1;
+}
+
+/* Title */
 h1 {
   text-align: center;
-  color: #2980b9;
+  color: #000000; /* Black color */
   font-size: 36px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
+/* Button to go back to admin panel */
 .back-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 12px 25px;
+  padding: 10px 20px;
   background-color: #3498db;
-  color: white;
+  color: #000000; /* Black color */
   font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s;
 }
 
 .back-btn:hover {
   background-color: #2980b9;
 }
 
-.loading-text {
-  text-align: center;
-  font-size: 18px;
-  color: #2980b9;
-}
-
-.error-message {
-  color: red;
-  font-size: 18px;
-  text-align: center;
-}
-
+/* Table container */
 .table-container {
   overflow-x: auto;
 }
 
+/* Election Table */
 .election-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  background-color: rgba(52, 152, 219, 0.1); /* Transparent Blue Background */
-  border: 1px solid #ddd;
+  font-size: 16px;
 }
 
-.election-table th,
-.election-table td {
-  padding: 12px 15px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
+/* Table Header */
 .election-table th {
-  background-color: rgba(52, 152, 219, 0.8); /* Transparent Blue Header */
+  background-color: #2980b9;
   color: white;
-}
-
-.election-table tr:nth-child(even) {
-  background-color: rgba(236, 240, 241, 0.8); /* Lighter transparent background */
-}
-
-.election-table tr:hover {
-  background-color: rgba(236, 240, 241, 0.6); /* Slightly darker transparent hover effect */
-}
-
-.update-btn,
-.delete-btn {
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 12px;
+  text-align: left;
   font-weight: bold;
+}
+
+/* Table Rows */
+.election-table td {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold; /* Making table text bold */
+  color: #000000; /* Black color */
+}
+
+.election-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.election-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+.update-btn, .delete-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold; /* Bold text */
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .update-btn {
-  background-color: #27ae60;
-  color: white;
+  background-color: #3498db;
+  color: #000000; /* Black color */
   border: none;
 }
 
 .update-btn:hover {
-  background-color: #2ecc71;
+  background-color: #2980b9;
 }
 
 .delete-btn {
   background-color: #e74c3c;
-  color: white;
+  color: #000000; /* Black color */
   border: none;
-  margin-left: 10px;
 }
 
 .delete-btn:hover {
   background-color: #c0392b;
+}
+
+/* Loading and Error messages */
+.loading-text, .error-message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold; /* Bold text */
+}
+
+.error-message {
+  color: #e74c3c;
+}
+
+.loading-text {
+  color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .all-elections-container {
+    padding: 20px;
+  }
+
+  .election-table th, .election-table td {
+    font-size: 14px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+  }
 }
