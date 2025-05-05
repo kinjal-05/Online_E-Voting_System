@@ -51,6 +51,7 @@ const ForAdmin = () => {
 
   return (
     <div className="admin-results-container">
+       <button className="back-button" onClick={() => navigate("/admin-panel")}>Back to Dashboard</button>
       <h1 className="admin-results-title">Election Results</h1>
 
       {Object.keys(groupedResults).length > 0 ? (
@@ -85,7 +86,7 @@ const ForAdmin = () => {
         <p className="no-results">No results available.</p>
       )}
 
-      <button className="back-button" onClick={() => navigate("/admin-panel")}>Back to Dashboard</button>
+     
     </div>
   );
 };
