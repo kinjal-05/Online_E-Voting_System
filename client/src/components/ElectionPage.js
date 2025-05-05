@@ -66,7 +66,10 @@ const ElectionPage = () => {
 
   return (
     <div className="election-page-container">
-      <h2 className="page-title">Election Page</h2>
+      <h2 style={{ color: "#000", fontWeight: "700", fontSize: "32px", marginBottom: "10px" }}>
+  Election Page
+</h2>
+
       <h3 className="welcome-message">Welcome, {user.name}!</h3>
       <p className="district-info">You are in the district: <strong>{district}</strong></p>
       <div className="election-table-container">
