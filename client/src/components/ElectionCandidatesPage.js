@@ -100,7 +100,8 @@ const ElectionCandidatesPage = () => {
 
   return (
     <div className="election-candidates-container">
-      <h2 className="page-title">Candidates for Election</h2>
+     <h2 style={{ color: "black", fontWeight: "bold" }}>Candidates for Election</h2>
+
       <div className="candidates-list">
         {candidates.length > 0 ? (
           candidates.map((candidate) => (
