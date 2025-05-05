@@ -102,7 +102,10 @@ const CandidatePanel = () => {
 
   return (
     <div className="candidate-panel">
-      <h1>Welcome {user?.firstName} {user?.lastName}</h1>
+     <h1 style={{ color: "black" }}>
+  Welcome {user?.firstName} {user?.lastName}
+</h1>
+
       <div className="panel-buttons">
         {candidateInfo ? (
           <div className="candidate-info">
@@ -136,7 +139,7 @@ const CandidatePanel = () => {
             ))}
           </ul>
         ) : (
-          <p>No posts available.</p>
+          <p></p>
         )}
       </div>
 
