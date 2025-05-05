@@ -1,112 +1,142 @@
-/* Overall container */
+/* CandidateEvents.css */
+
+/* Main container */
 .candidate-events-container {
-  padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
   max-width: 800px;
-  margin: auto;
+  width:100%;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
 }
 
-/* Title */
 .candidate-events-title {
-  text-align: center;
   font-size: 2rem;
   color: #333;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
-/* No events message */
 .no-events {
   font-size: 1.2rem;
+  color: #555;
   text-align: center;
-  color: #888;
 }
 
-/* Event List */
 .events-list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 .event-item {
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .event-title {
   font-size: 1.5rem;
-  color: #2d3e50;
-  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
 }
 
 .event-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .event-buttons {
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-.update-btn, .delete-btn {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+.update-btn,
+.delete-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border: none;
 }
 
-.update-btn:hover, .delete-btn:hover {
+.update-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.update-btn:hover {
   background-color: #45a049;
 }
 
-/* Delete button */
 .delete-btn {
-  background-color: #f44336;
+  background-color: #FF6347;
+  color: white;
 }
 
 .delete-btn:hover {
-  background-color: #e53935;
+  background-color: #e55347;
 }
 
-/* Back button */
 .back-btn {
-  display: block;
-  width: 100%;
-  background-color: #007bff;
+  background-color: #007BFF;
   color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  text-align: center;
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border: none;
 }
 
 .back-btn:hover {
   background-color: #0056b3;
 }
 
-/* Loading and error messages */
-.loading {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #007bff;
-}
-
+/* Error and Loading Messages */
 .error-message {
   color: red;
   font-size: 1.2rem;
   text-align: center;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .candidate-events-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .candidate-events-title {
+    font-size: 1.8rem;
+  }
+
+  .event-title {
+    font-size: 1.2rem;
+  }
+
+  .event-description {
+    font-size: 0.9rem;
+  }
+
+  .update-btn, .delete-btn, .back-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }
