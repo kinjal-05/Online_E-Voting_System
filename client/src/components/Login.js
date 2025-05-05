@@ -40,7 +40,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className="center-wrapper">
       <div className="login-form">
         <h2>Login</h2>
         {error && <p>{error}</p>}
