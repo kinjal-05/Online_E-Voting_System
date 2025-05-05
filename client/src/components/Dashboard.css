@@ -1,202 +1,116 @@
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #6a11cb, #2575fc); /* Beautiful gradient background */
-  margin: 0;
-  padding: 0;
-}
-
-/* Dashboard Container */
 .dashboard-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-  color: white;
-  text-align: center;
-  min-height: 100vh;
+ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1); /* Slight transparent background */
-  border-radius: 12px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  text-align: center;
+  
+  /* Make sure there's no blur */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-/* Welcome Message */
+
+/* Welcome message */
 .welcome-message {
-  font-size: 32px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-  letter-spacing: 1px;
-}
-
-/* Button Styles */
-button {
-  padding: 12px 25px;
-  font-size: 18px;
-  color: white;
-  background-color: #3498db;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 10px;
-  display: inline-block;
-}
-
-button:hover {
-  background-color: #2980b9;
-  transform: scale(1.05);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Admin/Candidate/Default Panels */
-.dashboard-header {
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.dashboard-header h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.dashboard-header p {
-  font-size: 18px;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-/* Event Section */
-.events-section {
-  background-color:rgb(154, 192, 224); /* Semi-transparent background */
-  border-radius: 12px;
-  padding: 30px;
-  margin-top: 40px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 900px;
-  color:#fff
-}
-
-.events-section h1 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #2e18d7;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.events-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.events-section li {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.events-section li:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.events-section h4 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #0a5283;
-  margin-bottom: 8px;
-}
-
-.events-section p {
-  font-size: 18px;
-  color: #160648;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fbf6f6;
   margin-bottom: 10px;
 }
 
-.events-section p:last-child {
-  font-style: italic;
-  color: #090444;
+/* Section headers */
+.dashboard-header h2 {
+  font-size: 1.8rem;
+  color: #f8f2f2;
+  margin: 20px 0;
+  font-weight: bold;
 }
 
-/* Button Container */
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #f4f2f2;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #fb8c00;
+  transform: translateY(-2px);
+}
+
+/* Horizontal layout for buttons */
 .button-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
   margin-top: 20px;
-  gap: 20px;
 }
 
-.button-container button {
-  padding: 12px 25px;
-  font-size: 18px;
-  background-color: #2ecc71;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
+/* Events section */
 
-.button-container button:hover {
-  background-color: #27ae60;
-}
 
-/* Error & Success Messages */
-.error-message {
-  color: red;
-  font-size: 18px;
+
+
+
+.events-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f8fdff;
   text-align: center;
-  margin-top: 20px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-.success-message {
-  color: green;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 20px;
-  font-weight: 600;
+/* Event card list */
+.events-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .dashboard-container {
-    padding: 25px;
-  }
+.events-section li {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(23, 41, 57, 0.1);
+  transition: background 0.3s;
+  font-weight: bold;
+}
 
-  .welcome-message {
-    font-size: 26px;
-    color:white
-  }
+.events-section li:hover {
+  background: rgba(92, 6, 230, 0.701);
+}
 
-  .dashboard-header h2 {
-    font-size: 22px;
-    color:white
-  }
+.events-section h4 {
+  color: #f1ebeb;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
-  .events-section h1 {
-    font-size: 24px;
-  }
+.events-section p {
+  margin: 4px 4px;
+  color: #f6f9f9;
+  font-size: 25px;
+  font-weight: bold;
+  display:center;
+}
 
-  .events-section li {
-    padding: 15px;
-  }
-
-  button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  .button-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.events-section {
+  background-color: #1a1a2e; /* Dark background color for the event section */
+ width:200%;
+ height:100%;
+ margin:40px 50px 89px -100px;
 }
